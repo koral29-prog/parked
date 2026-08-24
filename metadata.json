@@ -1,6 +1,0 @@
-{
-  "name": "Parked",
-  "description": "Privacy-first offline parking location finder and memory assistant with compass guidance and directions.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
