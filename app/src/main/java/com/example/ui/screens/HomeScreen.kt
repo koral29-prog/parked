@@ -55,10 +55,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
@@ -199,7 +196,7 @@ fun HomeScreen(
                         Spacer(modifier = Modifier.width(10.dp))
                         Text(
                             text = "Parked",
-                            fontWeight = FontWeight.Black,
+                            fontWeight = FontWeight.Medium,
                             letterSpacing = (-0.5).sp
                         )
                     }
@@ -253,30 +250,23 @@ fun HomeScreen(
                 ) {
                     Surface(
                         modifier = Modifier
-                            .size(130.dp)
+                            .size(208.dp)
                             .scale(heroPulse)
-                            .shadow(16.dp, CircleShape),
+                            .padding(1.dp),
                         shape = CircleShape,
-                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
+                        color = MaterialTheme.colorScheme.surfaceVariant
                     ) {
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .background(
-                                    Brush.verticalGradient(
-                                        listOf(
-                                            MaterialTheme.colorScheme.primaryContainer,
-                                            MaterialTheme.colorScheme.surface
-                                        )
-                                    )
-                                ),
+                                .background(MaterialTheme.colorScheme.surfaceVariant),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.LocationOn,
                                 contentDescription = null,
-                                tint = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.size(68.dp)
+                                tint = MaterialTheme.colorScheme.onSurface,
+                                modifier = Modifier.size(78.dp)
                             )
                         }
                     }
@@ -286,7 +276,7 @@ fun HomeScreen(
                     Text(
                         text = copy.carQuestion,
                         style = MaterialTheme.typography.headlineMedium,
-                        fontWeight = FontWeight.ExtraBold,
+                        fontWeight = FontWeight.Normal,
                         color = MaterialTheme.colorScheme.onSurface,
                         textAlign = TextAlign.Center
                     )
@@ -312,9 +302,8 @@ fun HomeScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(72.dp)
-                            .shadow(12.dp, RoundedCornerShape(24.dp))
                             .testTag("i_parked_here_button"),
-                        shape = RoundedCornerShape(24.dp),
+                        shape = RoundedCornerShape(36.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.primary
                         )
@@ -332,8 +321,8 @@ fun HomeScreen(
                             Text(
                                 text = copy.parkedHere,
                                 style = MaterialTheme.typography.headlineSmall,
-                                fontWeight = FontWeight.Black,
-                                letterSpacing = 0.5.sp
+                                fontWeight = FontWeight.Medium,
+                                letterSpacing = 0.sp
                             )
                         }
                     }

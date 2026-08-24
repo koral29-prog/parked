@@ -25,7 +25,7 @@ enum class AppLanguage {
 data class UserPreferences(
     val distanceUnit: DistanceUnit = DistanceUnit.METRIC,
     val hapticFeedback: Boolean = true,
-    val themeMode: AppThemeMode = AppThemeMode.SYSTEM,
+    val themeMode: AppThemeMode = AppThemeMode.DARK,
     val highAccuracyCompass: Boolean = true,
     val language: AppLanguage = AppLanguage.ENGLISH
 )
@@ -39,7 +39,7 @@ class UserPreferencesRepository(context: Context) {
 
     private fun loadPreferences(): UserPreferences {
         val unitStr = prefs.getString("distance_unit", DistanceUnit.METRIC.name) ?: DistanceUnit.METRIC.name
-        val themeStr = prefs.getString("theme_mode", AppThemeMode.SYSTEM.name) ?: AppThemeMode.SYSTEM.name
+        val themeStr = prefs.getString("theme_mode", AppThemeMode.DARK.name) ?: AppThemeMode.DARK.name
         val haptics = prefs.getBoolean("haptic_feedback", true)
         val highAccuracy = prefs.getBoolean("high_accuracy_compass", true)
         val languageStr = prefs.getString("language", AppLanguage.ENGLISH.name) ?: AppLanguage.ENGLISH.name
