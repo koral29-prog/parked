@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/koral29-prog/parked/releases/latest/download/Parked-v1.0.2-debug.apk">
+  <a href="https://github.com/koral29-prog/parked/releases/latest/download/Parked-v1.0.3-debug.apk">
     <img src="https://img.shields.io/badge/Download-Android_APK-006D32?logo=android&amp;logoColor=white" alt="Download Android APK" />
   </a>
 </p>
@@ -54,7 +54,7 @@ Open the project in Android Studio, then run it on an Android device or emulator
 ./gradlew :app:assembleDebug
 ```
 
-The APK is published in GitHub Releases as `Parked-v1.0.2-debug.apk`.
+The APK is published in GitHub Releases as `Parked-v1.0.3-debug.apk`.
 
 ## Project structure
 
