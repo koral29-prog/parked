@@ -4,6 +4,12 @@
 
 # Run and deploy your AI Studio app
 
+## Download
+
+[Download the latest APK](https://github.com/koral29-prog/parked/raw/main/app/build/outputs/apk/debug/app-debug.apk)
+
+This build includes the refreshed UI, smoother screen transitions, and English/Turkish language support.
+
 This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/f6dd1a6b-f76b-4eaa-ad25-fcec001ad2d7
